@@ -14,5 +14,8 @@ class IndexController extends ControllerBase
             $this->flash->notice('This is a sample application of the Phalcon Framework.
                 Please don\'t provide us any personal information. Thanks');
         }
+
+		$users = Users::find(1);
+		die(var_dump($users[0]->toArray()));
     }
 }

@@ -29,4 +29,9 @@ class Users extends Model
         
         return $this->validate($validator);
     }
+
+	public function columnMap()
+	{
+		return ['password' => 'passwd'];
+	}
 }

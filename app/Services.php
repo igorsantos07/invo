@@ -81,6 +81,8 @@ class Services extends \Base\Services
      */
     protected function initDb()
     {
+        \Phalcon\Mvc\Model::setup(['ignoreUnknownColumns' => true]);
+
         $config = $this->get('config')->get('database')->toArray();
 
         $dbClass = 'Phalcon\Db\Adapter\Pdo\\' . $config['adapter'];
