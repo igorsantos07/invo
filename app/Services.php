@@ -67,7 +67,7 @@ class Services extends \Base\Services
         $volt = new VoltEngine($view, $di);
 
         $volt->setOptions(array(
-            "compiledPath" => APP_PATH . "cache/volt/"
+            "compiledPath" => $di->get('config')->application->cacheDir
         ));
 
         $compiler = $volt->getCompiler();
